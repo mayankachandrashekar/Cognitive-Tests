@@ -55,12 +55,13 @@ using namespace cv;
     
     // self.Romo = [RMCharacter Romo];
     //[RMCore setDelegate:self];
-    dispatch_async(dispatch_get_main_queue(), ^{
         _ColorLabel.text=@"WELCOME TO STROOP COLOR TEST";
         [self speakText:@"Hi!! Would you like to play a game?"];
         
         
-    });
+        
+    usleep(2000000);
+    [self tappedOnRecord:NULL];
     
     //[self speakText:@"Hello How are you"];
 }

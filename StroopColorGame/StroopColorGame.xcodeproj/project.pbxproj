@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8AD6B6A1B70EA2A0063A167 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6B691B70EA2A0063A167 /* SpeechKit.framework */; };
+		A8AD6B6E1B71026A0063A167 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6B6D1B71026A0063A167 /* AudioToolbox.framework */; };
+		A8AD6B6F1B7102730063A167 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6B6B1B71023E0063A167 /* CFNetwork.framework */; };
+		A8AD6B711B7102820063A167 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6B701B7102820063A167 /* Security.framework */; };
+		A8AD6B731B7103750063A167 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6B721B7103750063A167 /* SystemConfiguration.framework */; };
+		A8AD6B781B71055C0063A167 /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6B751B71055C0063A167 /* earcon_cancel.wav */; };
+		A8AD6B791B71055C0063A167 /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6B761B71055C0063A167 /* earcon_done_listening.wav */; };
+		A8AD6B7A1B71055C0063A167 /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6B771B71055C0063A167 /* earcon_listening.wav */; };
 		A8AD6E001B688F4A00705480 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6DFF1B688F4A00705480 /* main.m */; };
 		A8AD6E031B688F4A00705480 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6E021B688F4A00705480 /* AppDelegate.m */; };
-		A8AD6E061B688F4A00705480 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6E051B688F4A00705480 /* ViewController.m */; };
+		A8AD6E061B688F4A00705480 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6E051B688F4A00705480 /* ViewController.mm */; };
 		A8AD6E091B688F4A00705480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E071B688F4A00705480 /* Main.storyboard */; };
 		A8AD6E0B1B688F4A00705480 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E0A1B688F4A00705480 /* Images.xcassets */; };
 		A8AD6E0E1B688F4A00705480 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E0C1B688F4A00705480 /* LaunchScreen.xib */; };
 		A8AD6E1A1B688F4A00705480 /* StroopColorGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6E191B688F4A00705480 /* StroopColorGameTests.m */; };
 		A8AD6E241B692AC200705480 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6E231B692AC200705480 /* AVFoundation.framework */; };
+		A8AD6E271B6BC7B000705480 /* AbstractOCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6E261B6BC7B000705480 /* AbstractOCVViewController.m */; };
+		A8AD6E291B6BC84500705480 /* smile.xml in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E281B6BC84500705480 /* smile.xml */; };
+		A8AD6E2C1B6BC85800705480 /* OpenCVSample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E2A1B6BC85800705480 /* OpenCVSample-Info.plist */; };
+		A8AD6E321B6BCDA300705480 /* RMCharacter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E2F1B6BCDA200705480 /* RMCharacter.bundle */; };
+		A8AD6E331B6BCDA300705480 /* RMCharacter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6E301B6BCDA300705480 /* RMCharacter.framework */; };
+		A8AD6E341B6BCDA300705480 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6E311B6BCDA300705480 /* RMCore.framework */; };
+		A8AD6E361B6BD5B300705480 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6E351B6BD5B300705480 /* CoreMotion.framework */; };
+		A8AD6E381B6BD6E900705480 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6E371B6BD6E900705480 /* ExternalAccessory.framework */; };
+		A8AD6E3A1B6BDBB300705480 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6E391B6BDBB300705480 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +45,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8AD6B691B70EA2A0063A167 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
+		A8AD6B6B1B71023E0063A167 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A8AD6B6D1B71026A0063A167 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A8AD6B701B7102820063A167 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A8AD6B721B7103750063A167 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8AD6B751B71055C0063A167 /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
+		A8AD6B761B71055C0063A167 /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
+		A8AD6B771B71055C0063A167 /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
 		A8AD6DFA1B688F4A00705480 /* StroopColorGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StroopColorGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8AD6DFE1B688F4A00705480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8AD6DFF1B688F4A00705480 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8AD6E011B688F4A00705480 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A8AD6E021B688F4A00705480 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A8AD6E041B688F4A00705480 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A8AD6E051B688F4A00705480 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A8AD6E051B688F4A00705480 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		A8AD6E081B688F4A00705480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8AD6E0A1B688F4A00705480 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A8AD6E0D1B688F4A00705480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,6 +67,17 @@
 		A8AD6E181B688F4A00705480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8AD6E191B688F4A00705480 /* StroopColorGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StroopColorGameTests.m; sourceTree = "<group>"; };
 		A8AD6E231B692AC200705480 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A8AD6E251B6BC7B000705480 /* AbstractOCVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractOCVViewController.h; sourceTree = "<group>"; };
+		A8AD6E261B6BC7B000705480 /* AbstractOCVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractOCVViewController.m; sourceTree = "<group>"; };
+		A8AD6E281B6BC84500705480 /* smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = smile.xml; sourceTree = "<group>"; };
+		A8AD6E2A1B6BC85800705480 /* OpenCVSample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OpenCVSample-Info.plist"; sourceTree = "<group>"; };
+		A8AD6E2B1B6BC85800705480 /* OpenCVSample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenCVSample-Prefix.pch"; sourceTree = "<group>"; };
+		A8AD6E2F1B6BCDA200705480 /* RMCharacter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RMCharacter.bundle; sourceTree = "<group>"; };
+		A8AD6E301B6BCDA300705480 /* RMCharacter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RMCharacter.framework; sourceTree = "<group>"; };
+		A8AD6E311B6BCDA300705480 /* RMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RMCore.framework; sourceTree = "<group>"; };
+		A8AD6E351B6BD5B300705480 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		A8AD6E371B6BD6E900705480 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		A8AD6E391B6BDBB300705480 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +85,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AD6B731B7103750063A167 /* SystemConfiguration.framework in Frameworks */,
+				A8AD6B711B7102820063A167 /* Security.framework in Frameworks */,
+				A8AD6B6F1B7102730063A167 /* CFNetwork.framework in Frameworks */,
+				A8AD6B6E1B71026A0063A167 /* AudioToolbox.framework in Frameworks */,
+				A8AD6E3A1B6BDBB300705480 /* opencv2.framework in Frameworks */,
+				A8AD6E381B6BD6E900705480 /* ExternalAccessory.framework in Frameworks */,
+				A8AD6E361B6BD5B300705480 /* CoreMotion.framework in Frameworks */,
+				A8AD6E341B6BCDA300705480 /* RMCore.framework in Frameworks */,
+				A8AD6B6A1B70EA2A0063A167 /* SpeechKit.framework in Frameworks */,
 				A8AD6E241B692AC200705480 /* AVFoundation.framework in Frameworks */,
+				A8AD6E331B6BCDA300705480 /* RMCharacter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +109,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8AD6B741B71053B0063A167 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD6B751B71055C0063A167 /* earcon_cancel.wav */,
+				A8AD6B761B71055C0063A167 /* earcon_done_listening.wav */,
+				A8AD6B771B71055C0063A167 /* earcon_listening.wav */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A8AD6DF11B688F4A00705480 = {
 			isa = PBXGroup;
 			children = (
+				A8AD6B741B71053B0063A167 /* Resources */,
+				A8AD6B721B7103750063A167 /* SystemConfiguration.framework */,
+				A8AD6B701B7102820063A167 /* Security.framework */,
+				A8AD6B6D1B71026A0063A167 /* AudioToolbox.framework */,
+				A8AD6B6B1B71023E0063A167 /* CFNetwork.framework */,
+				A8AD6B691B70EA2A0063A167 /* SpeechKit.framework */,
+				A8AD6E391B6BDBB300705480 /* opencv2.framework */,
+				A8AD6E371B6BD6E900705480 /* ExternalAccessory.framework */,
+				A8AD6E351B6BD5B300705480 /* CoreMotion.framework */,
+				A8AD6E2F1B6BCDA200705480 /* RMCharacter.bundle */,
+				A8AD6E301B6BCDA300705480 /* RMCharacter.framework */,
+				A8AD6E311B6BCDA300705480 /* RMCore.framework */,
 				A8AD6E231B692AC200705480 /* AVFoundation.framework */,
 				A8AD6DFC1B688F4A00705480 /* StroopColorGame */,
 				A8AD6E161B688F4A00705480 /* StroopColorGameTests */,
@@ -85,10 +153,12 @@
 		A8AD6DFC1B688F4A00705480 /* StroopColorGame */ = {
 			isa = PBXGroup;
 			children = (
+				A8AD6E251B6BC7B000705480 /* AbstractOCVViewController.h */,
+				A8AD6E261B6BC7B000705480 /* AbstractOCVViewController.m */,
 				A8AD6E011B688F4A00705480 /* AppDelegate.h */,
 				A8AD6E021B688F4A00705480 /* AppDelegate.m */,
 				A8AD6E041B688F4A00705480 /* ViewController.h */,
-				A8AD6E051B688F4A00705480 /* ViewController.m */,
+				A8AD6E051B688F4A00705480 /* ViewController.mm */,
 				A8AD6E071B688F4A00705480 /* Main.storyboard */,
 				A8AD6E0A1B688F4A00705480 /* Images.xcassets */,
 				A8AD6E0C1B688F4A00705480 /* LaunchScreen.xib */,
@@ -100,6 +170,9 @@
 		A8AD6DFD1B688F4A00705480 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8AD6E281B6BC84500705480 /* smile.xml */,
+				A8AD6E2A1B6BC85800705480 /* OpenCVSample-Info.plist */,
+				A8AD6E2B1B6BC85800705480 /* OpenCVSample-Prefix.pch */,
 				A8AD6DFE1B688F4A00705480 /* Info.plist */,
 				A8AD6DFF1B688F4A00705480 /* main.m */,
 			);
@@ -205,7 +278,13 @@
 			files = (
 				A8AD6E091B688F4A00705480 /* Main.storyboard in Resources */,
 				A8AD6E0E1B688F4A00705480 /* LaunchScreen.xib in Resources */,
+				A8AD6E291B6BC84500705480 /* smile.xml in Resources */,
 				A8AD6E0B1B688F4A00705480 /* Images.xcassets in Resources */,
+				A8AD6B7A1B71055C0063A167 /* earcon_listening.wav in Resources */,
+				A8AD6B781B71055C0063A167 /* earcon_cancel.wav in Resources */,
+				A8AD6E321B6BCDA300705480 /* RMCharacter.bundle in Resources */,
+				A8AD6B791B71055C0063A167 /* earcon_done_listening.wav in Resources */,
+				A8AD6E2C1B6BC85800705480 /* OpenCVSample-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8AD6E061B688F4A00705480 /* ViewController.m in Sources */,
+				A8AD6E061B688F4A00705480 /* ViewController.mm in Sources */,
+				A8AD6E271B6BC7B000705480 /* AbstractOCVViewController.m in Sources */,
 				A8AD6E031B688F4A00705480 /* AppDelegate.m in Sources */,
 				A8AD6E001B688F4A00705480 /* main.m in Sources */,
 			);
@@ -349,9 +429,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StroopColorGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -359,9 +445,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = StroopColorGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};

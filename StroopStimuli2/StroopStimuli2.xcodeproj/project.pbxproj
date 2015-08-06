@@ -21,7 +21,6 @@
 		A8AD6E091B688F4A00705480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E071B688F4A00705480 /* Main.storyboard */; };
 		A8AD6E0B1B688F4A00705480 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E0A1B688F4A00705480 /* Images.xcassets */; };
 		A8AD6E0E1B688F4A00705480 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E0C1B688F4A00705480 /* LaunchScreen.xib */; };
-		A8AD6E1A1B688F4A00705480 /* StroopColorGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6E191B688F4A00705480 /* StroopColorGameTests.m */; };
 		A8AD6E241B692AC200705480 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8AD6E231B692AC200705480 /* AVFoundation.framework */; };
 		A8AD6E271B6BC7B000705480 /* AbstractOCVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AD6E261B6BC7B000705480 /* AbstractOCVViewController.m */; };
 		A8AD6E291B6BC84500705480 /* smile.xml in Resources */ = {isa = PBXBuildFile; fileRef = A8AD6E281B6BC84500705480 /* smile.xml */; };
@@ -66,8 +65,6 @@
 		A8AD6E0A1B688F4A00705480 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A8AD6E0D1B688F4A00705480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A8AD6E131B688F4A00705480 /* StroopStimuli2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StroopStimuli2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8AD6E181B688F4A00705480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8AD6E191B688F4A00705480 /* StroopColorGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StroopColorGameTests.m; sourceTree = "<group>"; };
 		A8AD6E231B692AC200705480 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A8AD6E251B6BC7B000705480 /* AbstractOCVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractOCVViewController.h; sourceTree = "<group>"; };
 		A8AD6E261B6BC7B000705480 /* AbstractOCVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractOCVViewController.m; sourceTree = "<group>"; };
@@ -154,8 +151,7 @@
 				A8AD6E301B6BCDA300705480 /* RMCharacter.framework */,
 				A8AD6E311B6BCDA300705480 /* RMCore.framework */,
 				A8AD6E231B692AC200705480 /* AVFoundation.framework */,
-				A8AD6DFC1B688F4A00705480 /* StroopColorGame */,
-				A8AD6E161B688F4A00705480 /* StroopColorGameTests */,
+				A8AD6DFC1B688F4A00705480 /* StroopStimuli2 */,
 				A82B73F51B72865100894121 /* StroopStimuli2 Tests */,
 				A8AD6DFB1B688F4A00705480 /* Products */,
 			);
@@ -170,7 +166,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A8AD6DFC1B688F4A00705480 /* StroopColorGame */ = {
+		A8AD6DFC1B688F4A00705480 /* StroopStimuli2 */ = {
 			isa = PBXGroup;
 			children = (
 				A8AD6E251B6BC7B000705480 /* AbstractOCVViewController.h */,
@@ -184,7 +180,7 @@
 				A8AD6E0C1B688F4A00705480 /* LaunchScreen.xib */,
 				A8AD6DFD1B688F4A00705480 /* Supporting Files */,
 			);
-			path = StroopColorGame;
+			path = StroopStimuli2;
 			sourceTree = "<group>";
 		};
 		A8AD6DFD1B688F4A00705480 /* Supporting Files */ = {
@@ -195,23 +191,6 @@
 				A8AD6E2B1B6BC85800705480 /* OpenCVSample-Prefix.pch */,
 				A8AD6DFE1B688F4A00705480 /* Info.plist */,
 				A8AD6DFF1B688F4A00705480 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A8AD6E161B688F4A00705480 /* StroopColorGameTests */ = {
-			isa = PBXGroup;
-			children = (
-				A8AD6E191B688F4A00705480 /* StroopColorGameTests.m */,
-				A8AD6E171B688F4A00705480 /* Supporting Files */,
-			);
-			path = StroopColorGameTests;
-			sourceTree = "<group>";
-		};
-		A8AD6E171B688F4A00705480 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A8AD6E181B688F4A00705480 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,6 +244,7 @@
 				TargetAttributes = {
 					A8AD6DF91B688F4A00705480 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = W8RFWHQM7B;
 					};
 					A8AD6E121B688F4A00705480 = {
 						CreatedOnToolsVersion = 6.1;
@@ -333,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8AD6E1A1B688F4A00705480 /* StroopColorGameTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +428,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = StroopColorGame/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StroopStimuli2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = StroopStimuli2;
@@ -465,11 +445,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = StroopColorGame/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StroopStimuli2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = StroopStimuli2;
 				VALID_ARCHS = "armv7 armv7s";

@@ -14,7 +14,7 @@
 		<string>https://github.com/mayankachandrashekar/Cognitive-Tests.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CognitiveTestQA/VisualRecall.xcodeproj</string>
+	<string>VisualRecall/VisualRecall.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>21BB11ACD4FF0A2C5B240ECF902E1543BAA9EF27</key>

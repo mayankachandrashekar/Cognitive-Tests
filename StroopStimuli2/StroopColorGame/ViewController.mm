@@ -45,11 +45,11 @@ using namespace cv;
                   delegate:self];
     
     // Set earcons to play
-      SKEarcon* earconStart	= [SKEarcon earconWithName:@"earcon_listening.wav"];
+    SKEarcon* earconStart	= [SKEarcon earconWithName:@"earcon_listening.wav"];
     //    SKEarcon* earconStop	= [SKEarcon earconWithName:@"earcon_done_listening.wav"];
     //    SKEarcon* earconCancel	= [SKEarcon earconWithName:@"earcon_cancel.wav"];
     
-        [SpeechKit setEarcon:earconStart forType:SKStartRecordingEarconType];
+    [SpeechKit setEarcon:earconStart forType:SKStartRecordingEarconType];
     //    [SpeechKit setEarcon:earconStop forType:SKStopRecordingEarconType];
     //    [SpeechKit setEarcon:earconCancel forType:SKCancelRecordingEarconType];
     
@@ -58,6 +58,7 @@ using namespace cv;
     _ColorLabel.text=@"WELCOME TO STROOP COLOR TEST";
     [self speakText:@"Hi!! Would you like to play a game?"];
     
+    [self tappedOnRecord:NULL];
     
     
     //[self speakText:@"Hello How are you"];
@@ -236,9 +237,9 @@ using namespace cv;
             NSLog(@"Response is [%@]",_response);
             
             
-           // if( [self speakText:@"Thank you for the response. Lets move on to next label"])
-                
-                [self checkResults:_response];
+            // if( [self speakText:@"Thank you for the response. Lets move on to next label"])
+            
+            [self checkResults:_response];
         }
     }
     if (numOfResults > 1)
@@ -311,33 +312,35 @@ using namespace cv;
 #pragma mark - Record Button
 
 - (IBAction)tappedOnRecord:(id)sender {
-    
-    if (transactionState == TS_RECORDING) {
-        [voiceSearch stopRecording];
-    }
-    else if (transactionState == TS_IDLE) {
-        SKEndOfSpeechDetection detectionType;
-        NSString* recoType;
-        NSString* langType;
-        
-        transactionState = TS_INITIAL;
-        
-        //      alternativesDisplay.text = @"";
-        
-        /* 'Dictation' is selected */
-        detectionType = SKLongEndOfSpeechDetection; /* Dictations tend to be long utterances that may include short pauses. */
-        recoType = SKDictationRecognizerType; /* Optimize recognition performance for dictation or message text. */
-        langType = @"en_US";
-        /* Nuance can also create a custom recognition type optimized for your application if neither search nor dictation are appropriate. */
-        
-        NSLog(@"Recognizing type:'%@' Language Code: '%@' using end-of-speech detection:%d.", recoType, langType, detectionType);
-        
-        // if (voiceSearch) [voiceSearch release];
-        
-        voiceSearch = [[SKRecognizer alloc] initWithType:recoType
-                                               detection:detectionType
-                                                language:langType
-                                                delegate:self];
+    if(!_synthesizer.speaking)
+    {
+        if (transactionState == TS_RECORDING) {
+            [voiceSearch stopRecording];
+        }
+        else if (transactionState == TS_IDLE) {
+            SKEndOfSpeechDetection detectionType;
+            NSString* recoType;
+            NSString* langType;
+            
+            transactionState = TS_INITIAL;
+            
+            //      alternativesDisplay.text = @"";
+            
+            /* 'Dictation' is selected */
+            detectionType = SKLongEndOfSpeechDetection; /* Dictations tend to be long utterances that may include short pauses. */
+            recoType = SKDictationRecognizerType; /* Optimize recognition performance for dictation or message text. */
+            langType = @"en_US";
+            /* Nuance can also create a custom recognition type optimized for your application if neither search nor dictation are appropriate. */
+            
+            NSLog(@"Recognizing type:'%@' Language Code: '%@' using end-of-speech detection:%d.", recoType, langType, detectionType);
+            
+            // if (voiceSearch) [voiceSearch release];
+            
+            voiceSearch = [[SKRecognizer alloc] initWithType:recoType
+                                                   detection:detectionType
+                                                    language:langType
+                                                    delegate:self];
+        }
     }
 }
 

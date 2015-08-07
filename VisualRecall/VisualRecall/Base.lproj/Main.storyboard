@@ -22,17 +22,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mw-gb-NcE">
-                                <rect key="frame" x="79" y="396" width="162" height="42"/>
-                                <state key="normal" title="Record">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedOnRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oap-wB-m5B"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn6-Qk-JsR">
-                                <rect key="frame" x="128" y="337" width="64" height="42"/>
+                                <rect key="frame" x="57" y="346" width="64" height="42"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,6 +34,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vignette.png" translatesAutoresizingMaskIntoConstraints="NO" id="qk8-cQ-BaA">
                                 <rect key="frame" x="63" y="95" width="195" height="214"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dg-z4-gd0">
+                                <rect key="frame" x="137" y="414" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedOnStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wG2-rk-pAH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mw-gb-NcE">
+                                <rect key="frame" x="129" y="346" width="162" height="42"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedOnRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oap-wB-m5B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -51,6 +60,7 @@
                         <outlet property="ColorLabel" destination="BIg-5h-lWt" id="5vj-3C-S2c"/>
                         <outlet property="nextButton" destination="Qn6-Qk-JsR" id="dhi-Jp-Vk9"/>
                         <outlet property="recordButton" destination="7mw-gb-NcE" id="f7k-tM-kS4"/>
+                        <outlet property="startButton" destination="0dg-z4-gd0" id="1Ws-0J-JH4"/>
                         <outlet property="visualCue" destination="qk8-cQ-BaA" id="BGs-Jv-x8P"/>
                     </connections>
                 </viewController>

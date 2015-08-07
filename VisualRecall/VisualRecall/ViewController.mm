@@ -19,12 +19,13 @@ typedef enum{
 @property (strong, nonatomic) IBOutlet UILabel *ColorLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *visualCue;
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
+@property (strong, nonatomic) IBOutlet UIButton *startButton;
 
 @property NSString *response,*labelColor;
 @end
 
 int score=0,times=0,number=0,flagForVoiceInput=0;
-BOOL flagTest=false;
+BOOL flagTest=false,flagInstr=true;
 NSArray *colors = @[@"apple-1.jpg", @"carrots.jpg", @"cheeries.jpg",@"orange.png"];
 NSArray *seq ;
 const unsigned char SpeechKitApplicationKey[] = {0xf6, 0xb6, 0xbc, 0xb0, 0x40, 0x1a, 0x2c, 0x8f, 0x65, 0xab, 0xb2, 0x95, 0xfd, 0x59, 0xe6, 0x83, 0x31, 0xa8, 0x20, 0xf9, 0x2d, 0xcc, 0xb6, 0xd4, 0xd6, 0xca, 0xce, 0x66, 0x29, 0xe3, 0x57, 0x1f ,0x99, 0x13, 0xcf, 0xda, 0x2d, 0xfc, 0x69, 0x92, 0xa7, 0x1b, 0x28, 0xa5, 0x74, 0x0e, 0x28, 0xa5, 0xb6, 0x48, 0x9e, 0xe4, 0x14, 0x54, 0xb8, 0xea, 0x1e, 0x87, 0x51, 0x47, 0x6a, 0xa8, 0x66, 0x03};
@@ -60,14 +61,13 @@ using namespace cv;
     
     // self.Romo = [RMCharacter Romo];
     //[RMCore setDelegate:self];
-    _ColorLabel.text=@"WELCOME TO STROOP COLOR TEST";
-    [self speakText:@"Hi!! Would you like to play a game?"];
+   
     //    while (_synthesizer.speaking) {
     //
     //    }
     //    //[self tappedOnRecord:NULL];
     
-    
+    [self instructions];
     //[self speakText:@"Hello How are you"];
 }
 
@@ -79,6 +79,24 @@ using namespace cv;
 {
     // Add Romo's face to self.view whenever the view will appear
     // [self.Romo addToSuperview:self->romoView];
+}
+#pragma mark - Instructions
+-(void) instructions
+{
+    
+    [self speakText:@"Hello !!! Welcome to Visual Recall."];
+    [self speakText:@"To perform the test, call out the number corresponding of the image displayed on the screen when asked. For example"];
+    _ColorLabel.text=@"1";
+    _ColorLabel.textColor=[UIColor colorWithRed:(0/255.0) green:(102/255.0) blue:(51/255.0) alpha:1] ;
+    _ColorLabel.font=[UIFont fontWithName:@"Optima-ExtraBlack" size:50.0];
+    _visualCue.image = [UIImage imageNamed:@"orange.png"];
+    
+
+    [self speakText:@"Tap the record button to answer the question!! The answer for this is One"];
+    
+    
+    
+    
 }
 
 
@@ -216,8 +234,27 @@ using namespace cv;
         // searchBox.text = [results firstResult];
         _response=[results firstResult];
         NSLog(@"Response is [%@]",_response);
-        
-        if(flagForVoiceInput==0)
+        if(flagInstr)
+        {
+            //Converting Integer to corresponding Words
+            NSString *wordNumber;
+            //convert to words
+            NSNumber *numberValue = [NSNumber numberWithInt:(1)]; //needs to be NSNumber!
+            NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+            [numberFormatter setNumberStyle:NSNumberFormatterSpellOutStyle];
+            wordNumber = [numberFormatter stringFromNumber:numberValue];
+            NSLog(@"Answer: %@", wordNumber);
+            
+            if([_response.uppercaseString isEqualToString:wordNumber.uppercaseString])
+            {
+                [self speakText:@"PERFECT ANSWER!! Press Start!!"];
+                flagInstr=false;
+                
+            }
+            else
+                [self speakText:@"PLEASE TRY TELLING ONCE AGAIN"];
+        }
+       else if(flagForVoiceInput==0)
         {
             if([_response.uppercaseString isEqualToString:@"YES"])
             {
@@ -306,8 +343,18 @@ using namespace cv;
 }
 
 #pragma mark - Record Button
+- (IBAction)tappedOnStart:(id)sender {
+    _ColorLabel.text=@"WELCOME TO STROOP COLOR TEST";
+    [self speakText:@"Hi!! Would you like to play a game?"];
+    _startButton.enabled=false;
+}
 
 - (IBAction)tappedOnRecord:(id)sender {
+    
+    if(flagInstr)
+    {
+        _ColorLabel.text=@"";
+    }
     if(!_synthesizer.speaking)
     {
         if (transactionState == TS_RECORDING) {

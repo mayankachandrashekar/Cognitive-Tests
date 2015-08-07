@@ -21,6 +21,7 @@ typedef enum{
 @property NSString *response,*labelColor;
 @end
 
+BOOL flagInstr=true;
 int score=0,times=0,flag=0;
 NSArray *colors = @[@"RED", @"BLUE", @"PURPLE", @"GREEN", @"BROWN"];
 const unsigned char SpeechKitApplicationKey[] = {0xf6, 0xb6, 0xbc, 0xb0, 0x40, 0x1a, 0x2c, 0x8f, 0x65, 0xab, 0xb2, 0x95, 0xfd, 0x59, 0xe6, 0x83, 0x31, 0xa8, 0x20, 0xf9, 0x2d, 0xcc, 0xb6, 0xd4, 0xd6, 0xca, 0xce, 0x66, 0x29, 0xe3, 0x57, 0x1f ,0x99, 0x13, 0xcf, 0xda, 0x2d, 0xfc, 0x69, 0x92, 0xa7, 0x1b, 0x28, 0xa5, 0x74, 0x0e, 0x28, 0xa5, 0xb6, 0x48, 0x9e, 0xe4, 0x14, 0x54, 0xb8, 0xea, 0x1e, 0x87, 0x51, 0x47, 0x6a, 0xa8, 0x66, 0x03};
@@ -55,11 +56,12 @@ using namespace cv;
     
     // self.Romo = [RMCharacter Romo];
     //[RMCore setDelegate:self];
-    _ColorLabel.text=@"WELCOME TO STROOP COLOR TEST";
-    [self speakText:@"Hi!! Would you like to play a game?"];
-    
-    [self tappedOnRecord:NULL];
-    
+    [self instructions];
+//    _ColorLabel.text=@"WELCOME TO STROOP COLOR TEST";
+//    [self speakText:@"Hi!! Would you like to play a game?"];
+//    
+//    [self tappedOnRecord:NULL];
+//    
     
     //[self speakText:@"Hello How are you"];
 }
@@ -74,6 +76,22 @@ using namespace cv;
     // [self.Romo addToSuperview:self->romoView];
 }
 
+#pragma mark - Instructions
+-(void) instructions
+{
+    
+    [self speakText:@"Hello !!! Welcome to Stroop Color Test."];
+    [self speakText:@"To perform the test, call out the color of the word printed in on the screen. For example"];
+    _ColorLabel.text=@"RED";
+    _ColorLabel.textColor=[UIColor colorWithRed:(0/255.0) green:(102/255.0) blue:(51/255.0) alpha:1] ;
+    _ColorLabel.font=[UIFont fontWithName:@"Optima-ExtraBlack" size:50.0];
+    
+    [self speakText:@"Tap the record button to answer the question!! The answer for this is GREEN"];
+    
+    
+    
+    
+}
 
 #pragma mark - ColorWord Assignment
 -(void) colorWordAssignment
@@ -223,8 +241,19 @@ using namespace cv;
         // searchBox.text = [results firstResult];
         _response=[results firstResult];
         NSLog(@"Response is [%@]",_response);
-        
-        if(flag==0)
+        if(flagInstr)
+        {
+            if([_response.uppercaseString isEqualToString:@"GREEN"])
+            {
+                [self speakText:@"PERFECT ANSWER!! Press Start!!"];
+                flagInstr=false;
+                
+            }
+            else
+                [self speakText:@"PLEASE TRY TELLING ONCE AGAIN"];
+            
+        }
+        else if(flag==0)
         {
             if([_response.uppercaseString isEqualToString:@"YES"])
                 [self colorWordAssignment];
@@ -343,6 +372,12 @@ using namespace cv;
         }
     }
 }
+- (IBAction)tappedOnStart:(id)sender {
+    _ColorLabel.text=@"WELCOME TO STROOP COLOR TEST";
+    _ColorLabel.font=[UIFont fontWithName:@"Optima-ExtraBlack" size:10.0];
+    
+        [self speakText:@"Hi!! Would you like to play a game?"];
+}
 
 #pragma mark - Check results
 -(void) checkResults:(NSString*)response
@@ -351,7 +386,7 @@ using namespace cv;
     
     //  [self speakText:response];
     
-    if([_labelColor isEqual:response.uppercaseString])
+    if([_labelColor.uppercaseString isEqual:response.uppercaseString])
     {
         score++;
         //[self speakText:response];

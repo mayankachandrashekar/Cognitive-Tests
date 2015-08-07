@@ -80,6 +80,22 @@ using namespace cv;
     // Add Romo's face to self.view whenever the view will appear
     // [self.Romo addToSuperview:self->romoView];
 }
+#pragma mark - Instructions
+-(void) instructions
+{
+    
+    [self speakText:@"Hello !!! Welcome to Stroop Color Test."];
+    [self speakText:@"To perform the test, call out the color of the word printed in on the screen. For example"];
+    _ColorLabel.text=@"RED";
+    _ColorLabel.textColor=[UIColor colorWithRed:(0/255.0) green:(102/255.0) blue:(51/255.0) alpha:1] ;
+    _ColorLabel.font=[UIFont fontWithName:@"Optima-ExtraBlack" size:50.0];
+    
+    [self speakText:@"Tap the record button to answer the question!! The answer for this is GREEN"];
+    
+    
+    
+    
+}
 
 
 #pragma mark - Question Generator

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A8AD6DF91B688F4A00705480"
-               BuildableName = "VisualRecall.app"
+               BuildableName = "WordRecall.app"
                BlueprintName = "WordRecall"
                ReferencedContainer = "container:WordRecall.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A8AD6E121B688F4A00705480"
-               BuildableName = "VisualRecallTests.xctest"
+               BuildableName = "WordRecallTests.xctest"
                BlueprintName = "WordRecallTests"
                ReferencedContainer = "container:WordRecall.xcodeproj">
             </BuildableReference>
@@ -61,7 +61,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A8AD6E121B688F4A00705480"
-               BuildableName = "VisualRecallTests.xctest"
+               BuildableName = "WordRecallTests.xctest"
                BlueprintName = "WordRecallTests"
                ReferencedContainer = "container:WordRecall.xcodeproj">
             </BuildableReference>
@@ -81,7 +81,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8AD6DF91B688F4A00705480"
-            BuildableName = "VisualRecall.app"
+            BuildableName = "WordRecall.app"
             BlueprintName = "WordRecall"
             ReferencedContainer = "container:WordRecall.xcodeproj">
          </BuildableReference>
@@ -100,7 +100,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8AD6DF91B688F4A00705480"
-            BuildableName = "VisualRecall.app"
+            BuildableName = "WordRecall.app"
             BlueprintName = "WordRecall"
             ReferencedContainer = "container:WordRecall.xcodeproj">
          </BuildableReference>
@@ -118,7 +118,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A8AD6DF91B688F4A00705480"
-            BuildableName = "VisualRecall.app"
+            BuildableName = "WordRecall.app"
             BlueprintName = "WordRecall"
             ReferencedContainer = "container:WordRecall.xcodeproj">
          </BuildableReference>

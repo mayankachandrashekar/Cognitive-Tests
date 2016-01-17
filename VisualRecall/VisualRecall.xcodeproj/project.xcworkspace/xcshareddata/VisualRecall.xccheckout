@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CB615280-B902-473C-9B54-C0D4E9282716</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VisualRecall</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>21BB11ACD4FF0A2C5B240ECF902E1543BAA9EF27</key>
+		<string>https://github.com/mayankachandrashekar/Cognitive-Tests.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VisualRecall/VisualRecall.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>21BB11ACD4FF0A2C5B240ECF902E1543BAA9EF27</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mayankachandrashekar/Cognitive-Tests.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>21BB11ACD4FF0A2C5B240ECF902E1543BAA9EF27</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>21BB11ACD4FF0A2C5B240ECF902E1543BAA9EF27</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cognitive-Tests</string>
+		</dict>
+	</array>
+</dict>
+</plist>
